@@ -2,9 +2,15 @@
   "name": "bitmex-operator-bot",
   "version": "1.0.0",
   "description": "A Bitmex bot operator to create, delete or edit orders through an API",
-  "main": "src/server.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node src/server.js"
+    "clean": "rimraf build",
+    "build": "tsc",
+    "dev": "yarn run env ts-node src",
+    "prod": "ts-node src",
+    "env": "cross-env NODE_ENV=development",
+    "dist": "yarn run clean && yarn run build && node dist/src",
+    "start": "nodemon"
   },
   "keywords": [
     "bitmex",
@@ -12,12 +18,29 @@
     "crypto",
     "bitcoin"
   ],
-  "author": "Wilfredo Alcala",
+  "contributors": [
+    "Wilfredo Alcala <wilfredo.alcala@cryptotokenfund.com>",
+    "Edixon Alberto <edixonalbertto@gmail.com>"
+  ],
   "license": "ISC",
   "dependencies": {
-    "ccxt": "^1.18.851",
+    "bitmex-realtime-api": "^0.4.0",
+    "ccxt": "^1.18.1215",
     "cors": "^2.8.5",
-    "dotenv": "^8.0.0",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^4.17.1",
+    "@types/morgan": "^1.7.37",
+    "@types/node": "^12.7.9",
+    "cross-env": "^6.0.3",
+    "dotenv": "^8.1.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.3",
+    "rimraf": "^3.0.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
   }
 }

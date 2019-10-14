@@ -1,3 +1,14 @@
-node_modules
+# dependencies
+/node_modules
 
+# testing
+
+# production
+/build
+
+# misc
 .env
+.env.*
+yarn-error.log
+
+# user

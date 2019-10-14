@@ -16,12 +16,11 @@ A simple multi-exchange trading operator bot which receives buy/sell signals thr
 
 <!-- TODO: Add description -->
 
----
 
 ## End Points
 
 HTTP request | Description
------------- | ------------- | -------------
+------------ | -------------
 **GET** /api/ |
 **GET** /api/time |
 **GET** /api/`:exchange`/urls |

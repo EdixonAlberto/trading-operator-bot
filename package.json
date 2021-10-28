@@ -1,10 +1,12 @@
 {
-  "name": "bitmex-operator-bot",
+  "name": "trading-operator-bot",
   "version": "1.0.0",
-  "description": "A Bitmex bot operator to create, delete or edit orders through an API",
-  "main": "src/index.js",
+  "description": "A trading bot operator to create, delete or edit orders through an API",
+  "private": true,
+  "license": "UNLICENSED",
+  "author": "Edixon Piña",
   "scripts": {
-    "clean": "rimraf build",
+    "clean": "rimraf dist",
     "build": "tsc",
     "dev": "yarn run env ts-node src",
     "prod": "ts-node src",
@@ -13,16 +15,24 @@
     "start": "nodemon"
   },
   "keywords": [
+    "trading",
     "bitmex",
+    "binance",
     "bot",
     "crypto",
     "bitcoin"
   ],
   "contributors": [
-    "Wilfredo Alcala <wilfredo.alcala@cryptotokenfund.com>",
-    "Edixon Alberto <edixonalbertto@gmail.com>"
+    {
+      "name": "Wilfredo Alcala",
+      "email": "wilfredo.alcala@cryptotokenfund.com"
+    },
+    {
+      "name": "Edixon Piña",
+      "email": "edixonalbertto@gmail.com",
+      "url": "https://edixonalberto.com"
+    }
   ],
-  "license": "ISC",
   "dependencies": {
     "bitmex-realtime-api": "^0.4.0",
     "ccxt": "^1.18.1215",
